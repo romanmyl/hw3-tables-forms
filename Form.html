@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Form HW3</title>
+        <style>
+            .fieldset {
+                border: 2px red solid;
+                border-radius: 10px;
+                font-family: Helvetica;
+                font-size: 12;
+                width: 1000px;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset class="fieldset">
+        <legend >Form</legend>
+        <br>
+        <form method="post" action="https://formspree.io/i.ua4@i.ua">
+            <header>
+                <h1>Viewing of multimedia study</h1>
+            </header>
+            <section>
+                <div>    
+                    <p>Hello,
+                    <br>
+                    please take a few minutes of your time to fill out the following questionnaire.
+                    </p>
+                </div>
+                <div>
+                    <fieldset>
+                        <table cellpadding="10" cellspacing="0" border="0" bgcolor="white"> 
+                        <tr>
+                            <th width="150px"><label for="name">Name </label></th>
+                            <td><input type="name" id="name" placeholder="Your name" required size="41px"></td>
+                        </tr>
+                        <tr>
+                            <th width="150px"><label for="email">Email   </label></th>
+                            <td><input type="email" id="email" placeholder="Email" required size="41px"></td>
+                        </tr>
+                        </table>
+                    </fieldset>
+                <div>
+                    <fieldset>
+                        <p>Where do you most often watch movies?</p>
+                        <input type="radio" id="where-watch-movies"><label for="radio">In the cinema</label><br>
+                        <input type="radio" id="where-watch-movies"><label for="radio">In the cinema</label><br>
+                        <input type="radio" id="where-watch-movies"><label for="radio">In the cinema</label><br>
+                        <input type="radio" id="where-watch-movies"><label for="radio">In the cinema</label>
+                    </fieldset>
+                </div>
+            </section>
+            <footer>
+                <input type="submit" name="Send">
+            </footer>
+        </form>
+        <br>
+        </fieldset>
+    </body>
+</html>

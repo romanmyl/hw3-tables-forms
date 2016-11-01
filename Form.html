@@ -5,75 +5,205 @@
         <title>Form HW3</title>
         <style>
             .fieldset {
-                border: 2px red solid;
+                border: 5px rgb(222, 222, 223) solid;
                 border-radius: 10px;
                 font-family: Helvetica;
+                color: black;
                 font-size: 12;
-                width: 1000px;
+                width: 700px;
+                background: white;
+                display: inline-block;
+            }
+            .fieldset1 {
+                border: 5px rgb(222, 222, 223) solid;
+                border-radius: 10px;
+            }
+            .fieldset2 {
+                border: 1px rgb(222, 222, 223) solid;
+                border-radius: 10px;
+                background: #eee;
+                display: block;
+                margin: 0 auto;
+            }
+            .select-field {
+                width: 50%;
+                color: grey;
+            }
+            .great_btn {
+                display: block;
+                margin: 0 auto;
+                background: rgb(64,199,129);
+                color: white;
+                font-weight: 700;
+                font-size: 16px;
+                text-decoration: none;
+                user-select: none;
+                padding: .5em 2em;
+                outline: none;
+                border: 1px solid;
+                border-radius: 15px;
+                transition: 0.2s;
+            } 
+            .great_btn:hover { 
+                background: rgb(53, 167, 110); 
+                transition: 0.2s
+            }
+            .great_btn:active { 
+                background: rgb(33,147,90); 
+                transition: 0.1s
+            } 
+            .table-btn {
+                background: #eee;   
+            }
+            .table-row {
+                background: white;
+                border: 1px solid;
+                border-color: white;
+            }
+            .table-row2 {
+                background: white;
+                border: 1px solid;
+                border-color: white;
             }
         </style>
     </head>
     <body>
+        <table width="100%">
+        <tr>
+        <td width="25%"></td>
+        <td>
         <fieldset class="fieldset">
-        <legend >Form</legend>
+        <legend >Quiz form</legend>
         <br>
         <form method="post" action="https://formspree.io/i.ua4@i.ua">
             <header>
                 <h1>Viewing of multimedia study</h1>
             </header>
-            <section>
                 <div>    
                     <p>Hello,
                     <br>
-                    please take a few minutes of your time to fill out the following questionnaire.
+                    please take a few minutes of your time to fill out the following quiz.
                     </p>
                 </div>
                 <div>
-                    <fieldset>
-                        <table cellpadding="10" cellspacing="0" border="0" bgcolor="white"> 
+                    <fieldset class="fieldset1">
+                        <table class="table-row" cellpadding="10" cellspacing="1" border="0" bgcolor="white" width="100%"> 
                         <tr>
                             <th width="150px"><label for="name">Name </label></th>
-                            <td><input type="name" name="name" id="name" placeholder="Your name" required size="41px"></td>
+                            <td><input type="text" name="name" id="name" placeholder="Your name" required size="40"></td>
                         </tr>
                         <tr>
                             <th width="150px"><label for="email">Email   </label></th>
-                            <td><input type="email" name="email" id="email" placeholder="Email" required size="41px"></td>
+                            <td><input type="email" name="email" id="email" placeholder="Email" required size="40"></td>
                         </tr>
                         </table>
                     </fieldset>
-                <div>
-                    <fieldset>
-                        <h3>Where do you most often watch movies?</h3>
-                        <div>
-                        <input type="checkbox" name="watch" id="in-the-cinema" group checked><label for="in-the-cinema">In the cinema</label><br>
-                        <input type="checkbox" name="watch" id="on-the-internet"><label for="on-the-internet">On the internet</label><br>
-                        <input type="checkbox" name="watch" id="on-tv"><label for="on-tv">On TV</label><br>
-                        <input type="checkbox" name="watch" id="with-player"><label for="with-player">with a portable music player (MP3-player, telephone, ...)</label>
-                        </div>
-                    </fieldset>
+                    <br>
                 </div>
                 <div>
-                    <fieldset>
+                    <fieldset class="fieldset1">
+                        <h3>Where do you most often watch movies?</h3>
+                            <input type="radio" name="watch" id="in-the-cinema" value="in-the-cinema" checked><label for="in-the-cinema">In the cinema</label><br>
+                            <input type="radio" name="watch" id="on-the-internet" value="on-the-internet"><label for="on-the-internet">On the internet</label><br>
+                            <input type="radio" name="watch" id="on-tv" value="on-tv"><label for="on-tv">On TV</label><br>
+                            <input type="radio" name="watch" id="with-player" value="with-player"><label for="with-player">With a portable music player (MP3-player, telephone, ...)</label>
+                    </fieldset>
+                    <br>
+                </div>
+                <div>
+                    <fieldset class="fieldset1">
                         <h3>How often do you go to the cinema</h3>
-                        <select name="how-often-go-to-the-cintma" id>
+                        <select class="select-field" name="how-often-go-to-the-cintma">
                             <option id="often-1w">Once a week</option>
                             <option id="often-1m">Once a month</option>
                             <option id="several-times-y">Several times a year</option>
                             <option id="Less-f">Less frequently</option>
                         </select>
                     </fieldset>
+                    <br>
                 </div>
                 <div>
-                    <br>
-                        <input type="submit" name="send" value="        Send        ">
+                    <fieldset class="fieldset1">
+                        <h3>Where more often do you get the media?</h3>
+                            <input type="radio" name="get-media" id="in-store" value="in-store" checked><label for="in-store">Buying in store</label><br>
+                            <input type="radio" name="get-media" id="online" value="online"><label for="online">Buying online</label><br>
+                            <input type="radio" name="get-media" id="through-friends" value="through-friends"><label for="through-friends">Through friends</label><br>
+                            <input type="radio" name="get-media" id="download-net" value="download-net"><label for="download-net">Download from the Internet</label><br>
+                            <input type="radio" name="get-media" id="from-tv" value="from-tv"><label for="from-tv">From TV</label>
+                    </fieldset>
                     <br>
                 </div>
-            </section>
+                <div>
+                    <fieldset class="fieldset1">
+                        <h3>What channel you watch most often?</h3>
+                        <input type="text" class="select-field" name="what-channel" id="what-channel" placeholder="Type your response" required><br>
+                    </fieldset>
+                    <br>
+                </div>
+                <div>
+                    <fieldset class="fieldset1">
+                        <h3>Do you play computer games?</h3>
+                        <table class="table-row2" border="1" cellspacing="1" width="100%">
+                            <tr>
+                            <td width="33%"><input type="radio" name="play-comp-games" id="yes" value="yes" checked><label for="yes">Yes</label></td>
+                            <td width="33%"><input type="radio" name="play-comp-games" id="time-to-time" value="time-to-time"><label for="time-to-time">From time to time</label></td>
+                            <td><input type="radio" name="play-comp-games" id="never" value="never"><label for="never">Never</label></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <br>
+                </div>
+                <div>
+                    <fieldset class="fieldset1">
+                        <h3>What multimedia page you visit often?</h3>
+                        <input type="text" class="select-field" name="what-multimedia-page" id="what-multimedia-page" placeholder="Type your answer" required><br>
+                    </fieldset>
+                    <br>
+                </div>
+                <div>
+                    <fieldset class="fieldset1">
+                        <h3>What media player do you use most often?</h3>
+                        <input type="text" class="select-field" name="what-multimedia-player" id="what-multimedia-player" placeholder="Type your response" required><br>
+                    </fieldset>
+                    <br>
+                </div>
+                <div>
+                    <fieldset class="fieldset1">
+                        <h3>Which video format do you prefer?</h3>
+                            <input type="radio" name="video-format" id="mkv" value="mkv" checked><label for="mkv">MKV</label><br>
+                            <input type="radio" name="video-format" id="mp4" value="mp4"><label for="mp4">MP4</label><br>
+                            <input type="radio" name="video-format" id="mpeg" value="mpeg"><label for="mpeg">MPEG</label><br>
+                            <input type="radio" name="video-format" id="mov" value="mov"><label for="mov">MOV</label><br>
+                            <input type="radio" name="video-format" id="another" value="another"><label for="another">Another answer (please specify)</label><br>
+                            <input type="text" class="select-field" name="video-format-another-specify" id="video-format-another" maxlength="102" placeholder="Type your answer"><br>
+                    </fieldset>
+                    <br>
+                </div>
+                <div>
+                    <fieldset class="fieldset1">
+                        <h3>What is the audio format you prefer listening to music?</h3>
+                            <input type="radio" name="audio-format" id="wma" value="wma" checked><label for="wma">WMA</label><br>
+                            <input type="radio" name="audio-format" id="flac" value="flac"><label for="flac">FLAC</label><br>
+                            <input type="radio" name="audio-format" id="ogg" value="ogg"><label for="ogg">OGG</label><br>
+                            <input type="radio" name="audio-format" id="another-a" value="another-a"><label for="another-a">Another audio format (please specify)</label><br>
+                            <input type="text" class="select-field" name="audio-format-another-specify" id="audio-format-another" maxlength="102" placeholder="Type your response"><br>
+                    </fieldset>
+                    <br>
+                </div>
             <footer>
-                
+               <div>
+                   <fieldset class="fieldset2">
+                       <br>
+                                <input class="great_btn" type="submit" name="send" value="Send">
+                        <br>
+                    </fieldset>
+                </div> 
             </footer>
         </form>
-        <br>
         </fieldset>
+        </td>
+        <td width="25%"></td>
+        </tr>
+        </table>
     </body>
 </html>
